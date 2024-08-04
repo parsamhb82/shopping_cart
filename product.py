@@ -8,10 +8,14 @@ class Product:
         self.__num_scorers = num_scorers
 
     def add_num_scorers(self, score):
-        pass
-    
-    def update_stock(self):
-        pass
+        ssum = self.__score * self.__num_scorers
+        ssum = ssum + score
+        self.__num_scorers += 1
+        self.__score = ssum / self.__num_scorers 
+
+    def update_stock(self, num = -1):
+        self.__stock = self.__stock + num
+        
 
     def price_getter(self):
         return self.__price
