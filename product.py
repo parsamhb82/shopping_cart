@@ -14,22 +14,22 @@ class Product:
         pass
 
     def price_getter(self):
-        pass
+        return self.__price
 
     def stock_getter(self):
-        pass
+        return  self.__stock 
 
     def score_getter(self):
-        pass
-
+        return self.__score
+    
     def name_getter(self):
-        pass
+        return  self.__name
     
     def category_getter(self):
-        pass
+        return  self.__category
 
     def num_scorers_getter(self):
-        pass
+        return  self.__num_scorers
 
 
     
