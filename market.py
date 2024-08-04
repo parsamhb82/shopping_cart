@@ -6,15 +6,24 @@ class market:
             product_list = []
 
     def search_by_name(self, product_name):
-        pass
-        
-        #return product
+        for product in self.__product_list:
+            if product_name == product.name_getter():
+                return product
+        return
     
     def search_by_range(self, star_price, end_price):
-        pass
+        result = []
+        for product in self.__product_list:
+            if product.price_getter() >= star_price and product.price_getter() <= end_price :
+                result.append(product)
+        return result
 
     def search_by_category(self, category_name):
-        pass
+        result = []
+        for product in self.__product_list:
+            if product.category_getter() == category_name:
+                result.append(product)
+        return result
 
     def add_product(self, product):
         self.__product_list.append(product)
