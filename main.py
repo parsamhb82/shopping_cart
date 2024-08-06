@@ -40,6 +40,35 @@ while (True) :
             else:
                 for product in products_list:
                     print(product.name_getter())
+    elif inp == '3':
+        users_product_list = user.get_product()
+        for product in users_product_list :
+            product : Product
+            print(product.name_getter() , product.price_getter(), product.category_getter, product.score_getter())
+        
+        cart_inp = input('what do you want to do?\n1- add score to a product\n 2- remove a product\n3- finalize your cart\nelse- nothing go back')
+        if cart_inp == '1':
+            product_name = input('enter the products name : ')
+            product_in_scoring = user.search_in_cart(product_name)
+            if product_in_scoring :
+                users_score = int(input('enter a number between 1-5'))
+                product_in_scoring.add_num_scorers(users_score)
+            else :
+                print('product is not in your cart ')
+
+        elif cart_inp == '2':
+            product_name = input('enter the products name : ')
+            product_to_remove = user.search_in_cart(product_name)
+            if product_to_remove:
+                user.clear_product(product)
+            else:
+                print('product is not in your cart ')
+
+                
+        elif cart_inp == '3':
+            for product in users_product_list:
+                product : Product
+                product.update_stock()
 
             
 
