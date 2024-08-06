@@ -1,4 +1,6 @@
-class market:
+from product import Product
+from user import User
+class Market:
     def __init__ (self, product_list : list) :
         if product_list :
             self.__product_list = product_list
@@ -25,7 +27,8 @@ class market:
                 result.append(product)
         return result
 
-    def add_product(self, product):
+    def add_product(self, name, price, category, stock, score, num_scorers):
+        product = Product(name, price, category, stock, score, num_scorers)
         self.__product_list.append(product)
     
     def product_list_getter(self):
