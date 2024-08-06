@@ -2,10 +2,10 @@ from market import *
 from product import *
 from user import *
 
-market = market()
+market = Market()
 
 while (True) :
-    inp = input("1- add a product")
+    inp = input("1- add a product\n2- search for a product\n3- watch your cart\n")
     
     if inp == '1' :
         product_name = input(" enter the product name: ")
@@ -19,3 +19,9 @@ while (True) :
                 print('no match found')
             else :
                 print(product_name)
+        elif inp =='2':
+            pass
+    elif inp == '3':
+        pass
+    else :
+        print('wrong input number')
