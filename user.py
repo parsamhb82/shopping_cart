@@ -1,3 +1,4 @@
+from product import Product
 class User:
     def __init__(self):
         self.__product = []
@@ -8,5 +9,12 @@ class User:
         self.__product.remove(product)
         
     def get_product(self):
-        return self.__product 
+        return self.__product
+
+    def search_in_cart(self, product_name):
+        for product in self.__product:
+            product : Product
+            if product_name == product.name_getter():
+                return product
+        return None
 
