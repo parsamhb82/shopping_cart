@@ -1,7 +1,7 @@
 from product import Product
 from user import User
 class Market:
-    def __init__ (self, product_list : list) :
+    def __init__ (self, product_list  : list) :
         if product_list :
             self.__product_list = product_list
         else:

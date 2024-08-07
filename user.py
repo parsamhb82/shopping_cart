@@ -17,4 +17,8 @@ class User:
             if product_name == product.name_getter():
                 return product
         return None
+    
+    def set_product(self, product_list):
+        self.__product = product_list
+
 
