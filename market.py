@@ -33,4 +33,8 @@ class Market:
     
     def product_list_getter(self):
         return self.__product_list()
-
+    def update_product_stock(self, product_name, num=-1):
+        for product in self.__product_list:
+            if product.name_getter() == product_name:
+                product.update_stock(num)
+                return
